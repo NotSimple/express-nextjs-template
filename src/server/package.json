@@ -1,0 +1,45 @@
+{
+  "name": "g15-server",
+  "version": "0.1.0",
+  "main": "index.js",
+  "license": "MIT",
+  "engines": {
+    "node": "14"
+  },
+  "scripts": {
+    "start": "node app/index.js",
+    "dev": "cross-env NODE_ENV=development nodemon app/index.js",
+    "lint": "eslint **/*.{js,ejs,mjs}",
+    "db:migrate": "sequelize db:migrate",
+    "precommit": "lint-staged",
+    "postcheckout": "yarn install"
+  },
+  "dependencies": {
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "helmet": "^4.6.0",
+    "http-status": "^1.5.0",
+    "joi": "^17.4.2",
+    "morgan": "^1.10.0",
+    "pg": "^8.7.1",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.6.5",
+    "sequelize-cli": "^6.2.0",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "lint-staged": "^11.1.2",
+    "nodemon": "^2.0.13",
+    "prettier": "^2.4.1"
+  }
+}
